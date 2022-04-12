@@ -1,36 +1,37 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * times_table - prints the 9 times table, starting with 0
+ * print_to_98 - Check Holberton
+ * @n: A input integer
+ * Description: function that prints all natural numbers
+ * from n to 98, followed by a new line.
+ * Return: Nothing
  */
-void times_table(void)
+void print_to_98(int n)
 {
-	int i, j, k;
-
-	for (i = 0; i < 10; i++)
+	if (n <= 98)
 	{
-		for (j = 0; j < 10; j++)
+		for (; n <= 98; n++)
 		{
-			k = j * i;
-			if (j == 0)
-			{
-				_putchar(k + '0');
-			}
+			printf("%d", n);
 
-			if (k < 10 && j != 0)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(k + '0');
-			} else if (k >= 10)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar((k / 10) + '0');
-				_putchar((k % 10) + '0');
-			}
+			if (n == 98)
+				continue;
+			printf(", ");
 		}
-		_putchar('\n');
+		printf("\n");
+	}
+	else
+	{
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
 	}
 }

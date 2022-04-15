@@ -12,4 +12,8 @@ int _abs(int n)
 		return (n);
 	}
 	return (-n);
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> d146126ae4e31c215539fe43d0a7e7458e0af355
